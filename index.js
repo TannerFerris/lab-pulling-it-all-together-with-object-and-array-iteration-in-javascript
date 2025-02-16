@@ -114,3 +114,42 @@ function gameObject() {
         },
     };
 }
+
+
+function numPointsScore(playerName) {
+    console.log(gameObject().home.players[playerName].points);
+};
+
+function shoeSize(playerName) {
+    console.log(gameObject().home.players[playerName].shoe);
+}
+
+function teamColors(teamName) {
+    console.log(Object.values(gameObject()[teamName].colors));
+}
+
+function teamName() {
+
+    const team1 = ((gameObject().home.teamName))
+    const team2 = ((gameObject().away.teamName))
+
+    const teams = [team1, team2];
+    console.log(teams);
+}
+
+function playerNumbers(teamName) {
+    console.log(Object.values(gameObject()[teamName].players));
+}
+
+function playerStats(playerName) {
+    console.log(Object.entries(gameObject().home.players[playerName]));
+}
+
+const playerName = "Jason Terry";
+
+numPointsScore(playerName);
+shoeSize(playerName);
+teamColors("home");
+teamName();
+//playerNumbers("home");
+playerStats(playerName);
